@@ -1,0 +1,44 @@
+@import '../abstract/variaveis';
+
+
+@mixin bg-color($lado, $color...) {
+
+    @if $lado == left {
+        background: linear-gradient(to left, $color);
+    }
+    
+    @else {
+        background: linear-gradient(to right, $color);
+    }
+}
+
+
+footer {
+    text-align: center;
+    font-size: $tamanho-do-texto / 2.5;
+    border-top: 2px solid $cor-secundaria;
+    padding: 1rem;
+    font-weight: 300;
+    @include bg-color(left , $cor-primaria, $cor-secundaria, $cor-secundaria, $cor-secundaria, $cor-primaria);
+
+    i {
+        color: $cor-primaria;
+    }
+}
+
+
+@media screen and (max-width: 950px) {
+
+    footer {
+        font-size: $tamanho-do-texto / 3;
+    }
+
+}
+
+@media screen and (max-width: 810px) {
+
+    footer {
+        font-size: $tamanho-do-texto / 3.5;
+    }
+
+}

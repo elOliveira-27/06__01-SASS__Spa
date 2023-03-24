@@ -1,0 +1,117 @@
+@import '../abstract/variaveis';
+
+#cupom {
+    background-color: $cor-primaria;
+    padding: 4rem;
+    text-align: center;
+
+    .texto {
+        color: $cor-destaque;
+
+        h2 {
+            font-size: $tamanho-do-texto / 1.5;
+            font-weight: 300;
+            text-align: center;
+            margin: 1rem;
+        }
+    }
+
+    .input {
+        margin: 0 auto;
+        width: 600px;
+        border-radius: 1rem;
+        border: 4px solid white;
+        background-color: white;
+
+        input{
+            border-radius: 1rem;
+            height: 2.25rem;
+            border: none;
+            width: 575px;
+            outline: none;
+            text-align: center;
+            font-size: $tamanho-do-texto / 2;
+
+        }
+
+        &:hover, &:focus-within {
+            box-shadow: 0 1px 12px -2px black;
+            outline: none;
+        }
+    }
+
+    button {
+        font-size: $tamanho-do-texto / 3;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin: 1rem;
+        outline: none;
+        height: 2.75rem;
+        width: 12rem;
+        text-align: center;
+        background-color: $cor-destaque;
+        border-radius: 1rem;
+        border: 2px solid white;
+        box-shadow: 0 1px 12px -4px black;
+        outline: none;               
+        cursor: pointer;
+
+        &:hover {
+            background-color: $cor-destaque;
+            border: 2px solid black;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+
+    #cupom {
+        padding: 2rem;
+    
+        .texto {
+    
+            h2 {
+                font-size: $tamanho-do-texto / 2;
+            }
+        }
+    
+        .input {
+            width: 500px;
+    
+            input{
+                height: 2rem;
+                width: 475px;
+                font-size: $tamanho-do-texto / 2.25;
+    
+            }
+        }
+    
+        button {
+            font-size: $tamanho-do-texto / 3.5;
+            height: 2.5rem;
+            width: 10rem;
+            text-align: center;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    #cupom {
+        padding: 2rem 1rem;
+    
+        .texto h2 {
+                font-size: $tamanho-do-texto / 2.5;
+            }
+
+        .input {
+            width: 100%;
+    
+            input{
+                width: 100%;
+            }
+        }
+    }
+}
